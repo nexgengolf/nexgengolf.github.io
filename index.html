@@ -41,16 +41,16 @@
     <![endif]-->
   </head>
  <body>
- <div class="bg">
-   <div class="bg-color">
+  <div class="bg">
+    <div class="bg-color">
       <div class="container content">
-
         <div class="row">
           <div class="sun clearfix">
             <div class="col-sm-12">
-               <img src="assets/images/logo.png" alt="NexGen Golf" style="margin-bottom:120px; width: 50%;" />
-               <h3>we are almost ready for the</h3>
-               <h2>Grand Opening</h2>
+              <img class="img-responsive" src="assets/images/logo.png" alt="NexGen Golf" style="width: 60%; margin-left: auto; margin-right: auto" />
+              <h1></h1>
+              <h3>we are almost ready for the</h3>
+              <h2>Grand Opening</h2>
             </div>
             <div class="row" id="email-form">
               <div class="col-sm-offset-2 col-sm-8">
@@ -72,48 +72,42 @@
                 <div class="timing">
                   <div id="count-down" data-date="2015-10-01 00:00:00">
                   </div>
-                </div>
-                <!-- /.timing -->
+                </div><!-- /.timing -->
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- .container end here -->
-   </div>
- </div>
+      </div><!-- .container end here -->
+    </div>
+  </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/TimeCircles.js"></script>
+  <script src="assets/js/jquery.placeholder.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      // Invoke the plugin
+      $('input, textarea').placeholder();
+    });
+  </script>
+  <script>
+    $("#count-down").TimeCircles({
+      circle_bg_color: "#8a7f71",
+      use_background: true,
+      bg_width: 1.0,
+      fg_width: 0.02,
+      time: {
+        Days: { color: "#fefeee" },
+        Hours: { color: "#fefeee" },
+        Minutes: { color: "#fefeee" },
+        Seconds: { color: "#fefeee" }
+      }
+    });
+    $(window).resize(function(){
+      $('#count-down').TimeCircles().rebuild();
+    });
+  </script>
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/TimeCircles.js"></script>
-    <script src="assets/js/jquery.placeholder.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        // Invoke the plugin
-        $('input, textarea').placeholder();
-      });
-    </script>
-    <script>
-      $("#count-down").TimeCircles(
-       {
-           circle_bg_color: "#8a7f71",
-           use_background: true,
-           bg_width: 1.0,
-           fg_width: 0.02,
-           time: {
-                Days: { color: "#fefeee" },
-                Hours: { color: "#fefeee" },
-                Minutes: { color: "#fefeee" },
-                Seconds: { color: "#fefeee" }
-            }
-       }
-    );
-
-    </script>
-
-  </body>
+</body>
 </html>
