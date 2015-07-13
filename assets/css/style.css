@@ -46,9 +46,11 @@ body, html {
   color: #3a3a3a;
   height: 100% !important;
 }
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  height: auto !important;
-  width: 100% !important;
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body, html {
+    height: auto !important;
+    width: 100% !important;
+  }
 }
 h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 5px;
