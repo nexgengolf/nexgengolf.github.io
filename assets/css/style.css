@@ -46,12 +46,6 @@ body, html {
   color: #3a3a3a;
   height: 100% !important;
 }
-@media only screen and (orientation : landscape) {
-  body, html {
-    width: 100%;
-    height: auto !important;
-  }
-}
 h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 5px;
 	color: #3d5054;
